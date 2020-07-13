@@ -8,6 +8,7 @@ window.addEventListener("load", function () {
   var timing = {
     duration: 3000,
     iterations: Infinity,
+    direction: "alternate",
   };
   shapeElement.animate(frames, timing);
 });
