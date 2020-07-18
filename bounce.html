@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Animation API</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+      }
+      .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+    <script>
+      document.querySelector(".circle").animate(
+        [
+          {
+            transform: "translateY(0)",
+            background: "red",
+            background: "yellow",
+          },
+          {
+            transform: "translateY(350px)",
+            background: "blue",
+          },
+        ],
+        {
+          duration: 1000,
+          iterations: Infinity,
+          direction: "alternate",
+          easing: "ease-in-out",
+        }
+      );
+    </script>
+  </body>
+</html>
